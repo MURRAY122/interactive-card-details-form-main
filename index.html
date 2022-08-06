@@ -1,51 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Frontend Mentor Interactive card details form solution" />
+    <meta name="author" content="Michael Murray" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive card details form</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+    <link rel="stylesheet" href="./styles/css/styles.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
-
-  000
-
-  Cardholder Name
-  e.g. Jane Appleseed
-
-  Card Number
-  e.g. 1234 5678 9123 0000
-
-  Exp. Date (MM/YY)
-  MM
-  YY
-
-  CVC
-  e.g. 123
-
-  Confirm
-
-  <!-- Completed state start -->
-
-  Thank you!
-  We've added your card details
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <main class="section">
+      <div class="section__banner">
+        <div class="section__banner__group">
+          <div class="section__banner__card-1">
+            <div class="section__banner__card-1__logo"></div>
+            <div class="section__banner__card-1__number">0000 0000 0000 0000</div>
+            <div class="section__banner__card-1__details">
+              <div class="section__banner__card-1__details-name">JANE APPLESEED</div>
+              <div class="section__banner__card-1__details-exp">00/00</div>
+            </div>
+          </div>
+        </div>
+        <div class="section__banner__group">
+          <div class="section__banner__card-2">
+            <div class="section__banner__card-2__cvc">000</div>
+          </div>
+        </div>
+      </div>
+      <div class="section__content">
+        <form class="section__content__form" action="">
+          <div class="section__content__form-inputs">
+            <label for="card-name">CARDHOLDER NAME</label>
+            <input name="card-name" type="text" placeholder="e.g. Jane Appleseed" />
+          </div>
+          <div class="section__content__form-inputs">
+            <label for="card-number">CARD NUMBER</label>
+            <input name="card-number" type="text" pattern="\d*" minlength="16" maxlength="16" placeholder="e.g. 1234 5678 9123 0000" />
+          </div>
+          <div class="section__content__form-inputs-row">
+            <div class="section__content__form-inputs">
+              <label for="card-exp">EXP. DATE (MM/YY)</label>
+              <div class="section__content__form-inputs-exp">
+                <input name="card-month" type="text" pattern="\d*" minlength="2" maxlength="2" placeholder="MM" />
+                <input name="card-year" type="text" pattern="\d*" minlength="2" maxlength="2" placeholder="YY" />
+              </div>
+            </div>
+            <div class="section__content__form-inputs">
+              <label for="card-cvc">CVC</label>
+              <input name="card-cvc" type="text" placeholder="e.g 123" />
+            </div>
+          </div>
+          <button type="submit">Confirm</button>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.</div>
+    </footer>
+  </body>
 </html>
