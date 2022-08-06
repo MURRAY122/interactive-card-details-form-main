@@ -68,8 +68,8 @@
             }
             @include u.breakpoint-up(large){
                 justify-content: space-around;
-                top: 120px;
-                left: 80px;
+                top: 70px;
+                left: 105px;
                 height: 200px;
                 min-width: 365px;
             }
@@ -99,7 +99,7 @@
                     font-size: 18px;
                 }
                 @include u.breakpoint-up(large){
-                    font-size: 22px;
+                    font-size: 24px;
                     padding-left: 1rem;
                     margin-bottom: -1rem;
                     align-self: start;
@@ -110,16 +110,13 @@
                 flex-direction: row;
                 justify-content: space-between;
                 color: var(--light-grayish-violet);
+                font-size: 9px;
                 font-weight: 500;
+                text-transform: uppercase;
                 padding: 0rem 0.8rem;
 
-                &-name{
-                    font-size: 9px;
-                    text-transform: uppercase;
-                }
-                &-exp{
-                    font-size: 9px;
-                    text-transform: uppercase;
+                @include u.breakpoint-up(large){
+                    font-size: 12px;
                 }
             }
         }
@@ -142,6 +139,10 @@
 
             &__cvc{
                 font-size: 9px;
+
+                @include u.breakpoint-up(large){
+                    font-size: 12px;
+                }
             }
 
             @include u.breakpoint-down(medium){
@@ -152,10 +153,10 @@
                 top: 45px;
             }
             @include u.breakpoint-up(large){
-                top: -160px;
+                top: -75px;
                 left: 170px;
-                height: 185px;
-                width: 341px;
+                height: 190px;
+                width: 350px;
             }
         }
     }
@@ -175,11 +176,17 @@
         &__form{
             display: flex;
             flex-direction: column;
-            gap: .8rem;
+            gap: 1.5rem;
             padding-bottom: 2rem;
 
             @include u.breakpoint-up(large){
                 padding: 0;
+            }
+
+            &__error{
+                font-size: 12px;
+                font-weight: 500;
+                color: var(--error-red);
             }
 
             &-inputs{
@@ -193,12 +200,12 @@
                     font-size: 10px;
                     letter-spacing: 3px;
                     font-weight: bold;
+                    @include u.breakpoint-up(large){}
                 }
 
                 input{
                 font-family: var(--font-family);
-                margin-bottom: .5rem;
-                padding: .6rem;
+                padding: .8rem;
                 border-radius: .5rem;
                 border: 1px solid var(--light-grayish-violet);
 
@@ -207,6 +214,10 @@
                     font-size: var(--font-md);
                 }
             }
+            &-error{
+               border-color: var(--error-red)!important;
+            }
+
             &-row{
                 display: flex;
                 flex-direction: row;
@@ -216,17 +227,57 @@
                 input{
                     width: 100%;
                 }
+
+                @include u.breakpoint-down(medium){
+                    flex-direction: column;
+                }
             }
             &-exp{
                 display: flex;
                 flex-direction: row;
+                flex-wrap: wrap;
                 gap: .5rem;
+                width: 175px;
+
                 input{
-                    width: 70px;
+                    width: 80px;
                 }
             }
             }
             button{
+                font-family: var(--font-family);
+                font-weight: 500;
+                background-color: var(--very-dark-violet);
+                padding: 0.8rem;
+                color: var(--light-grayish-violet);
+                border-radius: .5rem;
+            }
+        }
+
+
+        //Thanks message
+        &__thanks{
+            display: flex;
+            flex-direction: column;
+            width: 520px;
+
+            &__group{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            &__title{
+                font-size: 32px;
+            }
+            &__desc{
+                font-size: var(--font-sm);
+                color: var(--dark-grayish-violet);
+            }
+
+            &__btn{
+                width: 100%;
                 font-family: var(--font-family);
                 font-weight: 500;
                 background-color: var(--very-dark-violet);

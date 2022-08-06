@@ -19,8 +19,20 @@ body{
     font-size: var(--font-md);
 }
 
+.hide{
+    display: none;
+}
+
+.form-error{
+    border-color: var(--error-red);
+}
 
 footer{
+    position: relative;
+    @include u.breakpoint-up(large){
+    top: -50px;
+    padding-left: 6rem;
+    }
     .attribution {
         font-size: 11px;
         text-align: center;
