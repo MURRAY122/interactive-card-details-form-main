@@ -22,7 +22,7 @@
         justify-content: center;
         height: 14.375rem;
         padding: 1rem;
-        background-image: url("../../../assets/images/bg-main-mobile.png");
+        background-image: url("../../assets/images/bg-main-mobile.png");
         background-repeat: no-repeat;
         background-size: cover;
         color: var(--white);
@@ -32,7 +32,7 @@
         }
 
         @include u.breakpoint-up(large){
-            background-image: url("../../../assets/images/bg-main-desktop.png");
+            background-image: url("../../assets/images/bg-main-desktop.png");
             height: 100vh;
             width: 30rem;
             flex-direction: column;
@@ -50,7 +50,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-around;
-            background-image: url("../../../assets/images/bg-card-front.png");
+            background-image: url("../../assets/images/bg-card-front.png");
             background-repeat: no-repeat;
             background-size: cover;
             padding: 0.5rem 1.5rem;
@@ -83,7 +83,7 @@
             }
 
             &__logo{
-                background-image: url("../../../assets/images/card-logo.svg");
+                background-image: url("../../assets/images/card-logo.svg");
                 background-repeat: no-repeat;
                 background-size: 3.125rem;
                 height: 2.125rem;
@@ -124,7 +124,7 @@
             justify-content: center;
             align-items: flex-end;
             gap: 1rem;
-            background-image: url("../../../assets/images/bg-card-back.png");
+            background-image: url("../../assets/images/bg-card-back.png");
             background-repeat: no-repeat;
             background-size: cover;
             width: 17.188rem;
@@ -225,6 +225,7 @@
                     }
                 }
             &-error{
+                //dosent appear without important.. Loading globals before section maybe the cause??
                border-color: var(--error-red)!important;
             }
 
