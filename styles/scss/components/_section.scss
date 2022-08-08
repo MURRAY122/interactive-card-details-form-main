@@ -10,33 +10,37 @@
     }
     @include u.breakpoint-up(large){
         flex-direction: row;
+        gap: 8rem;
+    }
+    @include u.breakpoint-up(xlarge){
         gap: 14rem;
     }
 
     &__banner{
         display: flex;
         flex-direction: column-reverse;
-        align-items: center;
-        align-content: center;
         justify-content: center;
-        height: 230px;
+        height: 14.375rem;
         padding: 1rem;
         background-image: url("../../../assets/images/bg-main-mobile.png");
         background-repeat: no-repeat;
         background-size: cover;
         color: var(--white);
 
+        @include u.breakpoint-down(medium){
+            height: 11.25rem;
+        }
+
         @include u.breakpoint-up(large){
             background-image: url("../../../assets/images/bg-main-desktop.png");
             height: 100vh;
-            width: 480px;
+            width: 30rem;
             flex-direction: column;
         }
 
         &__group{
             display: flex;
             height: 100%;
-            width: 100%;
             justify-content: flex-end;
             align-items: center;
         }
@@ -45,62 +49,61 @@
         &__card-1{
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            justify-content: space-around;
             background-image: url("../../../assets/images/bg-card-front.png");
             background-repeat: no-repeat;
-            background-size: contain;
-            width: 283px;
-            height: 155px;
-            padding: 1rem 1.5rem 1rem 0.5rem;
+            background-size: cover;
+            padding: 0.5rem 1.5rem;
             position: relative;
-            top: 5px;
-            left: -65px;
+            height: 10rem;
+            top: 0.313rem;
+            left: -4.063rem;
             z-index: 1;
             letter-spacing: 0.1rem;
-            box-shadow: 0px 10px 30px hsla(0, 0%, 0%, 0.451);
+            box-shadow: 0rem 0.625rem 1.875rem hsla(0, 0%, 0%, 0.451);
             border-radius: .5rem;
 
             @include u.breakpoint-down(medium){
-                max-width: 246px;
-                height: 134px;
-                padding: 0.5rem;
+                width: 14.375rem;
+                height: 8.375rem;
+                padding: 0.5rem 1rem;
                 left: 0;
             }
             @include u.breakpoint-up(large){
-                justify-content: space-around;
-                top: 70px;
-                left: 105px;
-                height: 200px;
-                min-width: 365px;
+                top: 5.625rem;
+                left: 3.75rem;
+                height: 10.313rem;
+                min-width: 17.5rem;
+            }
+            @include u.breakpoint-up(xlarge){
+                top: 3.25rem;
+                left: 8.438rem;
+                height: 13.75rem;
+                min-width: 25rem;
             }
 
             &__logo{
-                margin-left: 16px;
                 background-image: url("../../../assets/images/card-logo.svg");
                 background-repeat: no-repeat;
-                background-size: 50px;
-                height: 34px;
+                background-size: 3.125rem;
+                height: 2.125rem;
 
                 @include u.breakpoint-up(large){
-                    background-size: 70px;
-                    height: 43px;
+                    background-size: 4.375rem;
+                    height: 2.688rem;
                 }
             }
             &__number{
                 margin-top: 1rem;
-                font-size: 18px;
+                font-size: var(--font-md);
                 font-weight: 500;
                 align-self: center;
 
                 @include u.breakpoint-down(medium){
                     font-size: var(--font-sm);
                 }
-                @include u.breakpoint-up(medium){
-                    font-size: 18px;
-                }
-                @include u.breakpoint-up(large){
-                    font-size: 24px;
-                    padding-left: 1rem;
+                @include u.breakpoint-up(xlarge){
+                    font-size: var(--font-xlg);
                     margin-bottom: -1rem;
                     align-self: start;
                 }
@@ -110,14 +113,9 @@
                 flex-direction: row;
                 justify-content: space-between;
                 color: var(--light-grayish-violet);
-                font-size: 9px;
+                font-size: var(--font-vsm);
                 font-weight: 500;
                 text-transform: uppercase;
-                padding: 0rem 0.8rem;
-
-                @include u.breakpoint-up(large){
-                    font-size: 12px;
-                }
             }
         }
         &__card-2{
@@ -128,35 +126,35 @@
             gap: 1rem;
             background-image: url("../../../assets/images/bg-card-back.png");
             background-repeat: no-repeat;
-            background-size: contain;
-            width: 295px;
-            height: 155px;
+            background-size: cover;
+            width: 17.188rem;
+            height: 9.375rem;
             padding: 3rem;
             position: relative;
-            top: 70px;
-            left: 5px;
+            top: 4.375rem;
+            left: 0.313rem;
             letter-spacing: 0.1rem;
 
             &__cvc{
-                font-size: 9px;
-
-                @include u.breakpoint-up(large){
-                    font-size: 12px;
-                }
+                font-size: var(--font-vsm);
             }
 
             @include u.breakpoint-down(medium){
-                width: 194px;
-                height: 106px;
-                max-height: 153px;
+                width: 12.125rem;
+                height: 6.625rem;
+                max-height: 9.563rem;
                 padding: 3rem 1.5rem 3rem 1rem;
-                top: 45px;
+                top: 2.813rem;
             }
             @include u.breakpoint-up(large){
-                top: -75px;
-                left: 170px;
-                height: 190px;
-                width: 350px;
+                top: -1.563rem;
+                left: 8.125rem;
+            }
+            @include u.breakpoint-up(xlarge){
+                top: -3.313rem;
+                left: 12.813rem;
+                height: 13.438rem;
+                width: 24.375rem;
             }
         }
     }
@@ -166,11 +164,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
         padding: 0rem 1.2rem;
+        align-self: center;
 
         @include u.breakpoint-up(large){
             justify-content: left;
+            width: 21.875rem;
         }
 
         &__form{
@@ -184,7 +183,7 @@
             }
 
             &__error{
-                font-size: 12px;
+                font-size: var(--font-sm);
                 font-weight: 500;
                 color: var(--error-red);
             }
@@ -197,23 +196,34 @@
                 label{
                     font-family: var(--font-family);
                     font-weight: 500;
-                    font-size: 10px;
-                    letter-spacing: 3px;
+                    font-size: var(--font-vsm);
+                    letter-spacing: 0.188rem;
                     font-weight: bold;
-                    @include u.breakpoint-up(large){}
                 }
 
-                input{
-                font-family: var(--font-family);
-                padding: .8rem;
-                border-radius: .5rem;
-                border: 1px solid var(--light-grayish-violet);
+                &-input{
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid var(--light-grayish-violet);
+                    border-radius: .5rem;
+                    outline: none;
+                    font-family: var(--font-family);
 
-                &::placeholder{
-                    color: var(--light-grayish-violet);
-                    font-size: var(--font-md);
+                    &:focus-within{
+                        background: linear-gradient(#fff, #fff) padding-box,
+                        linear-gradient(45deg, var(--linear-gradient)) border-box;
+                        border: 2px solid transparent;
+                        border-radius: .5rem;
+                    }
+                    &::placeholder{
+                        color: var(--light-grayish-violet);
+                        font-size: var(--font-md);
+
+                        @include u.breakpoint-down(medium){
+                            font-size: var(--font-sm);
+                        }
+                    }
                 }
-            }
             &-error{
                border-color: var(--error-red)!important;
             }
@@ -237,10 +247,10 @@
                 flex-direction: row;
                 flex-wrap: wrap;
                 gap: .5rem;
-                width: 175px;
+                width: 10.938rem;
 
                 input{
-                    width: 80px;
+                    width: 5rem;
                 }
             }
             }
@@ -259,20 +269,20 @@
         &__thanks{
             display: flex;
             flex-direction: column;
-            width: 520px;
 
             &__group{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                gap: 1rem;
+                text-align: center;
+                gap: 2rem;
             }
 
             &__title{
-                font-size: 32px;
+                font-size: var(--font-xxlg);
             }
             &__desc{
-                font-size: var(--font-sm);
+                font-size: var(--font-md);
                 color: var(--dark-grayish-violet);
             }
 
@@ -281,6 +291,7 @@
                 font-family: var(--font-family);
                 font-weight: 500;
                 background-color: var(--very-dark-violet);
+                margin-top: 1rem;
                 padding: 0.8rem;
                 color: var(--light-grayish-violet);
                 border-radius: .5rem;

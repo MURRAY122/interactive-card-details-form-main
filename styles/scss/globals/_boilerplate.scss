@@ -36,6 +36,11 @@ footer{
     .attribution {
         font-size: 11px;
         text-align: center;
+
+        @include u.breakpoint-up(large){
+            text-align: right;
+            padding-right: 3rem;
+        }
       }
       .attribution a {
         color: hsl(228, 45%, 44%);

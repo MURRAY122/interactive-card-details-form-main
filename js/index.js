@@ -1,12 +1,13 @@
 
+/* Display thank you message on form vaild  */
 const formBox = document.getElementById('formBox');
 const thanksBox = document.getElementById('thanksBox');
-
 function displayThanks(){
     formBox.classList.add('hide');
     thanksBox.classList.remove('hide');
 }
 
+/* Display a form error div when child is not vaild and add class to input  */
 function displayErrorMsg(parent, child, msg){
     //Check if parent has error already and remove
     let oldError = parent.querySelector('.section__content__form__error');
@@ -26,6 +27,7 @@ function displayErrorMsg(parent, child, msg){
     }
 }
 
+/* Check if input element is valid and return true if so. Also updates displayed cards with inputs value  */
 const displayCardNum = document.getElementById('disCard-number');
 const displayCardName = document.getElementById('disCard-name');
 const displayCardMon = document.getElementById('disCard-mon');
@@ -34,6 +36,7 @@ const displayCardCvc = document.getElementById('disCard-cvc');
 
 function checkValid(e){
     var parentNode;
+    // Set parent node from input element
     if(e.target == undefined){
         input = e;
         parentNode = e.parentNode;
@@ -41,9 +44,11 @@ function checkValid(e){
         input = e.target;
         parentNode = e.target.parentNode;
     }
-    var numRegExp = /[a-zA-Z]/g; //To check for letters
-    var stringRegExp = /[0-9]/; //To check for numbers
 
+    var numRegExp = /[a-zA-Z]/g; //To check for letters in string
+    var stringRegExp = /[0-9]/; //To check for numbers in string
+
+    // Switch input and validate | Return false if not valid
     switch (input.getAttribute('name')) {
         case "card-name":
             if(typeof input.value != 'string' || input.value.length == 0 ){
@@ -114,38 +119,47 @@ function checkValid(e){
             return false;
             break;
     }
+    //Remove on error displayed
     displayErrorMsg(parentNode, input, "");
     //Return true for vaild form
     return true;
 }
 
-var elements = document.getElementsByTagName("INPUT");
-var submitBtn = document.getElementById('formSubmitBtn');
 
-submitBtn.addEventListener('click', function(){
-    var isValid = true;
-    var checksValid = true;
+function main(){
+    // Get form inputs and submit button
+    var elements = document.getElementsByTagName("INPUT");
+    var submitBtn = document.getElementById('formSubmitBtn');
 
-    for (var i = 0; i < elements.length; i++) {
-            if(checksValid){
-            checksValid  = checkValid(elements[i]);
-            if(checksValid == false){
-                isValid = false;
+    //add listener to submit btn
+    submitBtn.addEventListener('click', function(){
+        var isValid = true;
+        var checksValid = true;
+        // For each input check if vaild
+        for (var i = 0; i < elements.length; i++) {
+                if(checksValid){
+                checksValid  = checkValid(elements[i]);
+                if(checksValid == false){
+                    isValid = false;
+                }
             }
         }
-    }
-    // Form is valid
-    // Display thanks
-    if(isValid){
-        return displayThanks();
-    } else {
-    return;
-    }
-    })
+        // if form valid display thanks
+        if(isValid){
+            return displayThanks();
+        } else {
+            //else return
+            return;
+        }
+        })
 
-//Add event listeners to inputs
-for (var i = 0; i < elements.length; i++) {
-    elements[i].addEventListener('change', function(e){
-        checkValid(e);
-    })
+    //Add event listeners to inputs
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].addEventListener('change', function(e){
+            checkValid(e);
+        })
+    }
 }
+
+// Start Main JS
+main();
