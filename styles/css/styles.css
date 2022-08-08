@@ -216,16 +216,15 @@
 }
 .section__content__form-inputs-input {
   width: 100%;
-  padding: 10px;
-  border: 2px solid var(--light-grayish-violet);
+  padding: 0.625rem;
+  border: 0.125rem solid var(--light-grayish-violet);
   border-radius: 0.5rem;
   outline: none;
   font-family: var(--font-family);
 }
 .section__content__form-inputs-input:focus-within {
   background: linear-gradient(#fff, #fff) padding-box, linear-gradient(45deg, var(--linear-gradient)) border-box;
-  border: 2px solid transparent;
-  border-radius: 0.5rem;
+  border: 0.125rem solid transparent;
 }
 .section__content__form-inputs-input::-moz-placeholder {
   color: var(--light-grayish-violet);
