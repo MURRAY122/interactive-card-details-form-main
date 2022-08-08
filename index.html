@@ -36,23 +36,24 @@
         <div id="formBox" class="section__content__form">
           <div class="section__content__form-inputs">
             <label for="card-name">CARDHOLDER NAME</label>
-            <input class="section__content__form-inputs-input" name="card-name" type="text" placeholder="e.g. Jane Appleseed" />
+            <input class="section__content__form-inputs-input" id="card-name" name="card-name" type="text" placeholder="e.g. Jane Appleseed" />
           </div>
           <div class="section__content__form-inputs">
             <label for="card-number">CARD NUMBER</label>
-            <input class="section__content__form-inputs-input" name="card-number" type="text" placeholder="e.g. 1234 5678 9123 0000" />
+            <input class="section__content__form-inputs-input" id="card-number" name="card-number" type="text" placeholder="e.g. 1234 5678 9123 0000" />
           </div>
           <div class="section__content__form-inputs-row">
             <div class="section__content__form-inputs">
-              <label for="card-exp">EXP. DATE (MM/YY)</label>
               <div class="section__content__form-inputs-exp">
-                <input class="section__content__form-inputs-input" name="card-month" type="number" placeholder="MM" />
-                <input class="section__content__form-inputs-input" name="card-year" type="number" placeholder="YY" />
+                <label for="card-month">EXP. DATE </label>
+                <label for="card-year">(MM/YY)</label>
+                <input class="section__content__form-inputs-input" id="card-month" name="card-month" type="number" placeholder="MM" />
+                <input class="section__content__form-inputs-input" id="card-year" name="card-year" type="number" placeholder="YY" />
               </div>
             </div>
             <div class="section__content__form-inputs">
               <label for="card-cvc">CVC</label>
-              <input class="section__content__form-inputs-input" name="card-cvc" type="number" placeholder="e.g 123" />
+              <input class="section__content__form-inputs-input" id="card-cvc" name="card-cvc" type="number" placeholder="e.g 123" />
             </div>
           </div>
           <button id="formSubmitBtn" type="submit">Confirm</button>
