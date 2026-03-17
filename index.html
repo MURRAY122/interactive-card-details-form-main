@@ -1,91 +1,164 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Frontend Mentor Interactive card details form solution" />
-    <meta name="author" content="Michael Murray" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="description"
+			content="Frontend Mentor Interactive card details form solution"
+		/>
+		<meta name="author" content="MURRAY122" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/favicon-32x32.png"
+		/>
 
-    <link rel="stylesheet" href="./styles/css/styles.css" />
-    <title>Frontend Mentor | Interactive card details form</title>
-  </head>
-  <body>
-    <main class="section">
-      <!-- Card Display -->
-      <div class="section__banner">
-        <div class="section__banner__group">
-          <div class="section__banner__card-1">
-            <div class="section__banner__card-1__logo"></div>
-            <div id="disCard-number" class="section__banner__card-1__number">0000 0000 0000 0000</div>
-            <div class="section__banner__card-1__details">
-              <div id="disCard-name" class="section__banner__card-1__details-name">JANE APPLESEED</div>
-              <div id="disCard-exp" class="section__banner__card-1__details-exp"><span id="disCard-mon">00</span>/<span id="disCard-year">00</span></div>
-            </div>
-          </div>
-        </div>
-        <div class="section__banner__group">
-          <div class="section__banner__card-2">
-            <div id="disCard-cvc" class="section__banner__card-2__cvc">000</div>
-          </div>
-        </div>
-      </div>
-      <div class="section__content">
-        <!-- Card form -->
-        <div id="formBox" class="section__content__form">
-          <div class="section__content__form-inputs">
-            <label for="card-name">CARDHOLDER NAME</label>
-            <input class="section__content__form-inputs-input" id="card-name" name="card-name" type="text" placeholder="e.g. Jane Appleseed" />
-          </div>
-          <div class="section__content__form-inputs">
-            <label for="card-number">CARD NUMBER</label>
-            <input class="section__content__form-inputs-input" id="card-number" name="card-number" type="text" placeholder="e.g. 1234 5678 9123 0000" />
-          </div>
-          <div class="section__content__form-inputs-row">
-            <div class="section__content__form-inputs">
-              <div class="section__content__form-inputs-exp">
-                <label for="card-month">EXP. DATE </label>
-                <label for="card-year">(MM/YY)</label>
-                <input class="section__content__form-inputs-input" id="card-month" name="card-month" type="number" placeholder="MM" />
-                <input class="section__content__form-inputs-input" id="card-year" name="card-year" type="number" placeholder="YY" />
-              </div>
-            </div>
-            <div class="section__content__form-inputs">
-              <label for="card-cvc">CVC</label>
-              <input class="section__content__form-inputs-input" id="card-cvc" name="card-cvc" type="number" placeholder="e.g 123" />
-            </div>
-          </div>
-          <button id="formSubmitBtn" type="submit">Confirm</button>
-        </div>
+		<link rel="stylesheet" href="./styles/css/styles.css" />
+		<title>Frontend Mentor | Interactive card details form</title>
+	</head>
+	<body>
+		<main class="section">
+			<!-- Card Display -->
+			<div class="section__banner">
+				<div class="section__banner__group">
+					<div class="section__banner__card-1">
+						<div class="section__banner__card-1__logo"></div>
+						<div id="disCard-number" class="section__banner__card-1__number">
+							0000 0000 0000 0000
+						</div>
+						<div class="section__banner__card-1__details">
+							<div
+								id="disCard-name"
+								class="section__banner__card-1__details-name"
+							>
+								JANE APPLESEED
+							</div>
+							<div
+								id="disCard-exp"
+								class="section__banner__card-1__details-exp"
+							>
+								<span id="disCard-mon">00</span>/<span id="disCard-year"
+									>00</span
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section__banner__group">
+					<div class="section__banner__card-2">
+						<div id="disCard-cvc" class="section__banner__card-2__cvc">000</div>
+					</div>
+				</div>
+			</div>
+			<div class="section__content">
+				<!-- Card form -->
+				<div id="formBox" class="section__content__form">
+					<div class="section__content__form-inputs">
+						<label for="card-name">CARDHOLDER NAME</label>
+						<input
+							class="section__content__form-inputs-input"
+							id="card-name"
+							name="card-name"
+							type="text"
+							placeholder="e.g. Jane Appleseed"
+						/>
+					</div>
+					<div class="section__content__form-inputs">
+						<label for="card-number">CARD NUMBER</label>
+						<input
+							class="section__content__form-inputs-input"
+							id="card-number"
+							name="card-number"
+							type="text"
+							placeholder="e.g. 1234 5678 9123 0000"
+						/>
+					</div>
+					<div class="section__content__form-inputs-row">
+						<div class="section__content__form-inputs">
+							<div class="section__content__form-inputs-exp">
+								<label for="card-month">EXP. DATE </label>
+								<label for="card-year">(MM/YY)</label>
+								<input
+									class="section__content__form-inputs-input"
+									id="card-month"
+									name="card-month"
+									type="number"
+									placeholder="MM"
+								/>
+								<input
+									class="section__content__form-inputs-input"
+									id="card-year"
+									name="card-year"
+									type="number"
+									placeholder="YY"
+								/>
+							</div>
+						</div>
+						<div class="section__content__form-inputs">
+							<label for="card-cvc">CVC</label>
+							<input
+								class="section__content__form-inputs-input"
+								id="card-cvc"
+								name="card-cvc"
+								type="number"
+								placeholder="e.g 123"
+							/>
+						</div>
+					</div>
+					<button id="formSubmitBtn" type="submit">Confirm</button>
+				</div>
 
-        <!-- Thank you message -->
-        <div id="thanksBox" class="section__content__thanks hide">
-          <div class="section__content__thanks__group">
-            <div class="section__content__thanks__img">
-              <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="40" cy="40" r="40" fill="url(#a)" />
-                <path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3" />
-                <defs>
-                  <linearGradient id="a" x1="-23.014" y1="11.507" x2="0" y2="91.507" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#6348FE" />
-                    <stop offset="1" stop-color="#610595" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-            <div class="section__content__thanks__title">THANK YOU!</div>
-            <div class="section__content__thanks__desc">We've added your card details</div>
-            <button class="section__content__thanks__btn">Continue</button>
-          </div>
-        </div>
-      </div>
-    </main>
-    <footer>
-      <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://www.frontendmentor.io/profile/MURRAY122">MURRAY122</a>.
-      </div>
-    </footer>
-    <script src="./js/index.js"></script>
-  </body>
+				<!-- Thank you message -->
+				<div id="thanksBox" class="section__content__thanks hide">
+					<div class="section__content__thanks__group">
+						<div class="section__content__thanks__img">
+							<svg
+								width="80"
+								height="80"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<circle cx="40" cy="40" r="40" fill="url(#a)" />
+								<path
+									d="M28 39.92 36.08 48l16-16"
+									stroke="#fff"
+									stroke-width="3"
+								/>
+								<defs>
+									<linearGradient
+										id="a"
+										x1="-23.014"
+										y1="11.507"
+										x2="0"
+										y2="91.507"
+										gradientUnits="userSpaceOnUse"
+									>
+										<stop stop-color="#6348FE" />
+										<stop offset="1" stop-color="#610595" />
+									</linearGradient>
+								</defs>
+							</svg>
+						</div>
+						<div class="section__content__thanks__title">THANK YOU!</div>
+						<div class="section__content__thanks__desc">
+							We've added your card details
+						</div>
+						<button class="section__content__thanks__btn">Continue</button>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<div class="attribution">
+				Challenge by
+				<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+					>Frontend Mentor</a
+				>. Coded by <a href="https://github.com/MURRAY122">MURRAY122</a>.
+			</div>
+		</footer>
+		<script src="./js/index.js"></script>
+	</body>
 </html>
